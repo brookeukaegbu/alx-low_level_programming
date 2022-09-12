@@ -5,7 +5,7 @@
 /**
  * main - entry point
  * takes no argument
-
+ * 
  * Description: assign a random number to the variable n
  * Return: zero if successful
  */
