@@ -1,9 +1,9 @@
-#include "main.h"
+nclude "main.h"
 /**
-  * jack_bauer - prints every minute of the day
-  *
-  * Return: void
-  */
+ * jack_bauer - prints every minute of the day
+ *
+ * Return: void
+ */
 
 void jack_bauer(void)
 {
@@ -18,7 +18,7 @@ void jack_bauer(void)
 			k = m / 10;
 			l = m % 10;
 			_putchar('0' + i);
-			_putchar('0' + j);		
+			_putchar('0' + j);
 			_putchar(':');
 			_putchar('0' + k);
 			_putchar('0' + l);
