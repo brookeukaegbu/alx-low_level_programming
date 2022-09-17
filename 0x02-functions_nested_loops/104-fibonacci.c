@@ -12,7 +12,9 @@ unsigned long int i, j, k, j1, j2, k1, k2;
 
 j = 1;
 k = 2;
+
 printf("%lu", j);
+
 for (i = 1; i < 91; i++)
 {
 k = k + j;
@@ -34,5 +36,3 @@ j2 = k2 - j2;
 printf("\n");
 return (0);
 }
-
-
