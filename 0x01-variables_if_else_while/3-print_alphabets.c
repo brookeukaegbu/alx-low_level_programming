@@ -7,6 +7,7 @@
  * this program prints "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
  * Return: 0
  */
+
 int main(void)
 {
 	char ch;
