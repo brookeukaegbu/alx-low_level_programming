@@ -20,5 +20,5 @@ char *leet(char *s)
 				s[j] = b[i];
 		}
 	}
-	return (s)
+	return (s);
 }
