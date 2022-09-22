@@ -8,27 +8,24 @@
 
 char *cap_string(char *s)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; s[i] != 0; i++)
+	/* check first index for capital */
+	if (s[i] >= 'a' && s[i] <= 'z')
+		s[i] = s[i] - 'a' + 'A';
+	i++;
+
+	while (s[i] != '\0') /* iterate through string */
 	{
-		if (i == 0 && s[i] >= 97 && s[i] <= 122)
-			s[i] = s[i] - 32;
-		if (s[i + 1] >= 97 && s[i + 1] <= 122)
-		{
-			if (s[i] == ' ' || s[i] == '\n' || s[i] == ','
-				|| s[i] == ';' || s[i] == '.' || s[i] == '!'
-				|| s[i] == ' ? ' || s[i] == '"' || s[i] == '('
-				|| s[i] == ')' || s[i] == '{' || s[i] == '}')
-			{
-				s[i + 1] = s[i + 1] - 32;
-			}
-			if (s[i] == '\t')
-			{
-				s[i + 1] = s[i + 1] - 32;
-			}
-		}
+		/* if lowercase and prior char is separator, capitalize*/
+		if ((s[i] >= 'a' && s[i] <= 'z')
+				&& (s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '.' ||
+					s[i - 1] == '!' || s[i - 1] == '?' || s[i - 1] == '"' ||
+					s[i - 1] == '(' || s[i - 1] == ')' || s[i - 1] == '{' ||
+					s[i - 1] == '}' || s[i - 1] == ' ' || s[i - 1] == '\t'
+					|| s[i - 1] == '\n'))
+			s[i] = s[i] - 'a' + 'A';
+		i++;
 	}
 	return (s);
 }
-
