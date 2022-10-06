@@ -7,9 +7,10 @@
  * @argv: pointer to array of arguments
  * Return: 0 on success
  */
-int main(int argc, char *argv[] _attribute_((unused)))
+int main(int argc, char *argv[])
+
 {
-	if (argc > 0)
+	(void) argv
 		printf("%d\n", argc - 1);
 	return (0);
 }
